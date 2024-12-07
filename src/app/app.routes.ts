@@ -1,12 +1,13 @@
 import { Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TesteComponent } from './teste/teste.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
 
     {
         path: '',
-        redirectTo: '/app',
+        redirectTo: '/login',
         pathMatch: 'full'
     },
     {
@@ -15,9 +16,9 @@ export const routes: Routes = [
         title: 'começo'
     },
     {
-        path: 'app/teste',
-        component: TesteComponent,
-        title: 'teste'
+        path: 'login',
+        component: LoginComponent,
+        title: 'Login'
     }
     
 

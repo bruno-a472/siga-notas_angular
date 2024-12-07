@@ -8,7 +8,7 @@ import { TesteComponent } from './teste/teste.component';
   imports: [RouterOutlet,  TesteComponent],
   templateUrl: './app.component.html',
   // template: `
-
+    
   // `,
   styleUrl: './app.component.scss'
 })
