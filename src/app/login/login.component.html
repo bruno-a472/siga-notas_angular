@@ -1,4 +1,4 @@
-<div class="tela-inteira">
+<div class="tela-inteira" *ngIf="visualizacao">
     <div class="box"></div>
     <div class="area-login">
         <div class="cabecalho">
@@ -12,7 +12,7 @@
         <form class="login">
             <input class="login-usuario" type="text" placeholder="Usuário">
             <input class="login-senha" type="password" placeholder="Senha">
-            <button class="login-botao" type="button" (click)="trocar()">Entrar</button>
+            <button class="login-botao" type="button" (click)="iniciarLogin()">Entrar</button>
         </form>
     </div>
 </div>

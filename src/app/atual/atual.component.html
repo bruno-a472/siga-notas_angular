@@ -1,16 +1,13 @@
-<div class="painel-materias">
+<div class="painel-materias" *ngIf="visualizacao">
 
     <div class="thumb-esquerda"><img src="seta_cinza.png"></div>
     <div class="espaco-materias">
         <div class="espaco-materias-titulo"><h2>Matérias desse semestre</h2></div>
         <section class="container-materias">
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
+            <div class="loading" *ngIf="this.materiaService.getNotasCarregandoEstado()">
+                Carregando...
+            </div>
+            <app-materia class="materia" *ngFor="let materia of this.materiaService.getAllMateriasParciais()" [mat]="materia"></app-materia>
         </section>
     </div>
     <div class="thumb-direita">
@@ -19,7 +16,7 @@
 
 </div>
 
-<div class="painel-ia">
+<div class="painel-ia" *ngIf="visualizacao">
     <div class="espaco-ia">
         <div class="espaco-ia-titulo">Análise da IA para esse semestre</div>
         <div class="espaco-ia-texto">

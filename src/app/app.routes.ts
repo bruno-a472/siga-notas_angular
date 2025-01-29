@@ -1,6 +1,4 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { TesteComponent } from './teste/teste.component';
 import { LoginComponent } from './login/login.component';
 import { BunkerNotasComponent } from './bunker-notas/bunker-notas.component';
 import { HistoricoComponent } from './historico/historico.component';
@@ -21,7 +19,7 @@ export const routes: Routes = [
     {
         path: ':nome',
         component: BunkerNotasComponent,
-        title: 'Lucas',
+        title: '...',
         children: [
             {
                 path: 'atual',

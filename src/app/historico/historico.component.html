@@ -1,44 +1,23 @@
-<div class="painel-materias">
+<div class="painel-materias" *ngIf="visualizacao">
 
     <div class="thumb-esquerda">
         <a routerLink="../atual"><img src="seta.png"></a>
     </div>
     <div class="espaco-materias">
         <div class="espaco-materias-titulo"><h2>Matérias de todos os semestres</h2></div>
+        
         <section class="container-materias">
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
-            <app-materia class="materia"></app-materia>
+            <div class="loading" *ngIf="this.materiaService.getNotasCarregandoEstado()">
+                Carregando...
+            </div>
+            <app-materia class="materia" *ngFor="let materia of this.materiaService.getAllMateriasHistoricas()" [mat]="materia"></app-materia>
         </section>
     </div>
     <div class="thumb-direita"><img src="seta_cinza.png"></div>
 
 </div>
 
-<div class="painel-ia">
+<div class="painel-ia" *ngIf="visualizacao">
     <div class="espaco-ia">
         <div class="espaco-ia-titulo">Análise da IA para todos os semestres</div>
         <div class="espaco-ia-texto">

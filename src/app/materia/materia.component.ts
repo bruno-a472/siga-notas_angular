@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Materia } from '../materia';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-materia',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './materia.component.html',
   styleUrl: './materia.component.scss'
 })
-export class MateriaComponent {
 
+export class MateriaComponent {
+  @Input() mat!:Materia;
 }
