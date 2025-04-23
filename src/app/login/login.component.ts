@@ -26,28 +26,32 @@ export class LoginComponent {
     }, 100);
   } // ngOnInit()
 
-  iniciarLogin() {
-    const login =  {
-      usuario: (document.getElementsByClassName('login-usuario')[0] as HTMLInputElement).value,
-      senha: (document.getElementsByClassName('login-senha')[0] as HTMLInputElement).value
-      } // const login
+  // iniciarLogin() {
+  //   const login =  {
+  //     usuario: (document.getElementsByClassName('login-usuario')[0] as HTMLInputElement).value,
+  //     senha: (document.getElementsByClassName('login-senha')[0] as HTMLInputElement).value
+  //     } // const login
 
-    // Início requisição HTTP
-    this.dadosService.enviarLogin(login).subscribe(resposta => {
-      if (resposta['bool'] == false) {
-              // Login falhou
-      } // if
-      else {
-        this.router.navigate([`/${resposta['nome']}/atual`]);
-        this.nome = resposta['nome'];
-        this.estudante.defineId(resposta['id']);
-      } // else
+  //   // Início requisição HTTP
+  //   this.dadosService.enviarLogin(login).subscribe(resposta => {
+  //     if (resposta['bool'] == false) {
+  //             // Login falhou
+  //     } // if
+  //     else {
+  //       this.router.navigate([`/${resposta['nome']}/atual`]);
+  //       this.nome = resposta['nome'];
+  //       this.estudante.defineId(resposta['id']);
+  //     } // else
       
-    }, // resposta =>
-    erro => {
-      console.error('Erro ao enviar dados:', erro);
-    } // erro
-  ); // subscribe()
-  } // iniciarLogin()
+  //   }, // resposta =>
+  //   erro => {
+  //     console.error('Erro ao enviar dados:', erro);
+  //   } // erro
+  // ); // subscribe()
+  // } // iniciarLogin()
+
+  iniciarLogin() {
+
+  } // iniciarLogin() -- teste
 
 }
