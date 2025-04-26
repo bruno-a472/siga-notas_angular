@@ -24,7 +24,7 @@ export class BunkerNotasComponent {
 
   visualizacao = false;
   ngOnInit(): void {
-    // this.pegarNotas();
+    this.pegarNotas();
     setTimeout(() => {
       this.visualizacao = true;
     }, 100);
@@ -36,7 +36,7 @@ export class BunkerNotasComponent {
     
     // Início da requisição HTTP
     this.dadosService.receberNotas(id).subscribe(resposta => {
-      if (resposta['bool'] == false) { // Arrumar esse teste para caso haja return Vazio das notas
+      if (resposta['bool'] == false) { // Arrumar esse teste para o return Vazio das notas
         console.log('Falhou')
       } // if
       else {

@@ -16,14 +16,14 @@
     @media (max-width: 1000x) {
         height: 8vh;
     }   
-    & {max-width: 20vw;
+    max-width: 20vw;
     height: 10vh;
     padding: 5px;
     background-color: #17a8ff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     text-align: center;
-    justify-content: center;}
+    justify-content: center;
 }
 
 .nome-materia {
@@ -36,14 +36,14 @@
     @media (max-width: 600px) {
         font-size: 12px;
     }
-    & {font-size: 24px;
+    font-size: 24px;
     font-weight: 700;
     display: -webkit-box;
     -webkit-line-clamp: 2; // Define o limite para duas linhas
     -webkit-box-orient: vertical;
     overflow: hidden;
     word-break: break-word;
-    text-overflow: ellipsis;}
+    text-overflow: ellipsis;
 }
 
 .card-body {
@@ -65,5 +65,5 @@
     @media (max-width: 600px) {
         font-size: 8px;
     }
-    & {font-size: 18px;}
+    font-size: 18px;
 }
