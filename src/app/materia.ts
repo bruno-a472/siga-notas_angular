@@ -4,8 +4,9 @@ export interface Materia {
     nome: string;
     nota: string;
     abc: string;
+    status: string;
 }
-
+// {"tipo": "h", "nome": materia, "nota": nota, "abc": "D", "status": status}
 // export interface Status {
 //     status: false;
 // }

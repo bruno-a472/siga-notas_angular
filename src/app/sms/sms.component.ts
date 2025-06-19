@@ -34,7 +34,8 @@ export class SmsComponent {
     console.log(confirmacao);
     this.dadosService.enviarConfirmacao(confirmacao).subscribe(resposta => {
       if (resposta['bool'] == false) {
-              // Confirmação falhou
+        console.log('Confirmacao falhou')  
+        // Confirmação falhou
       } // if
       else {
         this.router.navigate([`/${resposta['nome']}/atual`]);

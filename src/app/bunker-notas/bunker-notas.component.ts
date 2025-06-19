@@ -24,7 +24,7 @@ export class BunkerNotasComponent {
 
   visualizacao = false;
   ngOnInit(): void {
-    // this.pegarNotas();
+    this.pegarNotas();
     setTimeout(() => {
       this.visualizacao = true;
     }, 100);

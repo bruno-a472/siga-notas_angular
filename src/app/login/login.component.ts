@@ -34,7 +34,8 @@ export class LoginComponent {
       // Início requisição HTTP
       this.dadosService.enviarLogin(login).subscribe(resposta => {
         if (resposta['bool'] == false) {
-                // Login falhou
+          console.log('Login falhou')    
+          // Login falhou
         } // if
         else {
           this.router.navigate([`/login/confirmacao`]);
